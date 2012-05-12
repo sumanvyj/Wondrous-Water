@@ -2,7 +2,7 @@
     var sources = [];
 
     var callback = function() {
-        sway();
+        swayUR();
     };
 
     var loadNextScript = function() {
@@ -32,9 +32,10 @@
         sources.push('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
     }
 
-    if (typeof (sway) == 'undefined') {
+    if (typeof (swayUR) == 'undefined') {
         sources.push('transform.min.js');
         sources.push('trans.js');
+        sources.push('water.js');
     }
 
     loadNextScript();
