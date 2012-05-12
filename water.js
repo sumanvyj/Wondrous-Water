@@ -866,8 +866,7 @@ function resizeWindow()
 		camera.top = 20;
 		camera.bottom = -20;
 	}
-
-	camera.updateProjectionMatrix();
+camera.updateProjectionMatrix();
 	renderer.setSize(WIDTH, HEIGHT);
 }
 
@@ -887,8 +886,8 @@ function pushWater(x, y, power)
 
 function init()
 {
-
-	// set the scene size
+	swayUR(); 
+	
 	var WIDTH = window.innerWidth, HEIGHT = window.innerHeight;
 	//var WIDTH = 400, HEIGHT = 300;
 
@@ -1151,8 +1150,6 @@ function updateFish(){
 		if(fishLoc[i]>myCanvas.width + 300)
 			fishLoc[i] = 0 - Math.random()*200 - 100;
 		allFish[i].style.left = fishLoc[i] + "px";
-		console.log("POS: " + allFish[i].style.left + " " + 
-			fishLoc[i]);
 	}
 	allFish = document.getElementsByClassName("fish_left");
 	for(var i = 0; i<allFish.length; i++){

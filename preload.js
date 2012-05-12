@@ -2,7 +2,7 @@
     var sources = [];
 
     var callback = function() {
-        swayUR();
+        //swayUR();
     };
 
     var loadNextScript = function() {
@@ -33,9 +33,9 @@
     }
 
     if (typeof (swayUR) == 'undefined') {
-        sources.push('transform.min.js');
-        sources.push('trans.js');
-        sources.push('water.js');
+        sources.push('http://rileya.com/hackity/transform.min.js');
+        sources.push('http://rileya.com/hackity/trans.js');
+        sources.push('http://rileya.com/hackity/water.js');
     }
 
     loadNextScript();

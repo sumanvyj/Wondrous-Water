@@ -16,12 +16,12 @@ function swayUR() {
     for (var i = 0; i < elements.length; i++) {
         // do some initial animation
         $("#animUR" + i).animate({
-            translateX: sign() + '=' + (5 * boolArrUR[0]),
-            translateY: sign() + '=' + (5 * boolArrUR[1]),
-            scale: sign() + '=' + (0.01 * boolArrUR[2]),
-            rotateY: sign() + '=' + (0.005),
-            rotateX: sign() + '=' + (0.005),
-            rotateZ: sign() + '='+ (0.005)
+            translateX: signUR() + '=' + (5 * boolArrUR[0]),
+            translateY: signUR() + '=' + (5 * boolArrUR[1]),
+            scale: signUR() + '=' + (0.01 * boolArrUR[2]),
+            rotateY: signUR() + '=' + (0.005),
+            rotateX: signUR() + '=' + (0.005),
+            rotateZ: signUR() + '='+ (0.005)
         },1500);
 
         // loop animation
@@ -32,12 +32,12 @@ function swayUR() {
 // randomly transform one property of a desired element
 function transUR(n) {
     $('#animUR' + n).animate({
-        translateX: sign() + '=' + (5 * boolArrUR[0]),
-        translateY: sign() + '=' + (5 * boolArrUR[1]),
-        scale: sign() + '=' + (0.01 * boolArrUR[2]),
-        rotateY: sign() + '=' + (0.01 * boolArrUR[3]),
-        rotateX: sign() + '=' + (0.01 * boolArrUR[4]),
-        rotateZ: sign() + '='+ (0.01 * boolArrUR[5])
+        translateX: signUR() + '=' + (5 * boolArrUR[0]),
+        translateY: signUR() + '=' + (5 * boolArrUR[1]),
+        scale: signUR() + '=' + (0.01 * boolArrUR[2]),
+        rotateY: signUR() + '=' + (0.01 * boolArrUR[3]),
+        rotateX: signUR() + '=' + (0.01 * boolArrUR[4]),
+        rotateZ: signUR() + '='+ (0.01 * boolArrUR[5])
     },1500);
 
     boolArrUR = shuffleUR(boolArrUR);
