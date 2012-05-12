@@ -1,11 +1,12 @@
 var myCanvas;
 var fish = new Array();
 var fishSpeeds = new Array();
-var numFish = 20;
+var numFish = 10;
 var fishLoc = new Array();
 var fishLoc2 = new Array();
+var scoobaLoc = 0;
+var scooba;
 drawWater();
-//animate();
 function drawWater(){
 
 	document.body.style.background = "#00CCFF";
@@ -102,7 +103,16 @@ function makeFish(){
 		fishDiv.appendChild(newFish);	
 		fishLoc2[j] = myCanvas.width + Math.random()*500;	
 	}
-	setInterval(updateFish,1000/10);
+	//setInterval(updateFish,1000/10);
+
+	scooba = document.createElement("img");
+	scooba.src = "http://www.cs.washington.edu/homes/eastebry/hack/sub.png";
+	scooba.style.position = "fixed";
+	scooba.zIndex = 250;
+	scooba.setAttribute("class","sub");
+	scooba.setAttribute("speed", 3);
+	scooba.style.bottom = Math.random()*(myCanvas.height-100) + 50 + "px";
+	fishDiv.appendChild(scooba);
 }
 	
 
@@ -113,7 +123,7 @@ function updateFish(){
 		fishLoc[i] += parseInt(allFish[i].getAttribute("speed"));
 		if(fishLoc[i]>myCanvas.width + 300)
 			fishLoc[i] = 0 - Math.random()*200 - 100;
-		allFish[i].style.left = fishLoc[i];	
+		allFish[i].style.left = fishLoc[i] + "px";
 	}
 	allFish = document.getElementsByClassName("fish_left");
 	for(var i = 0; i<allFish.length; i++){
@@ -121,8 +131,16 @@ function updateFish(){
 		fishLoc2[i] -= parseInt(allFish[i].getAttribute("speed"));
 		if(fishLoc2[i]<-300)
 			fishLoc2[i] =  myCanvas.width + Math.random()*200 + 100;
-		allFish[i].style.left = fishLoc2[i];	
+		allFish[i].style.left = fishLoc2[i] + "px";	
+	}
+
+	if (typeof scooba !== "undefined")
+	{
+		scooba.style.position = "fixed";
+		scoobaLoc -= parseInt(scooba.getAttribute("speed"));
+		if(scoobaLoc<-1000)
+			scoobaLoc =  myCanvas.width + Math.random()*200 + 1000;
+		scooba.style.left = scoobaLoc + "px";	
 	}
 }
-
 

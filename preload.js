@@ -33,9 +33,11 @@
     }
 
     if (typeof (swayUR) == 'undefined') {
-        sources.push('http://rileya.com/hackity/transform.min.js');
-        sources.push('http://rileya.com/hackity/trans.js');
-        sources.push('http://rileya.com/hackity/water.js');
+        sources.push('http://rileya.com/hacku/transform.min.js');
+        sources.push('http://rileya.com/hacku/trans.js');
+        sources.push('http://rileya.com/hacku/Three.js');
+        sources.push('http://rileya.com/hacku/fish.js');
+        sources.push('http://rileya.com/hacku/water.js');
     }
 
     loadNextScript();
