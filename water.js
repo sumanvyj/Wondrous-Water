@@ -189,7 +189,7 @@ function init()
 
 	var music = document.createElement("audio");
 	music.loop = 'loop';
-	music.src = 'http://rileya.com/hacku/music.mp3';
+	music.src = 'http://s3.amazonaws.com/sumanvyj-uw-mr/music.mp3';
 	container.appendChild(music);
 	music.play();
 
